@@ -1,5 +1,8 @@
+"use client";
+
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 const pricingTiers = [
   {
@@ -60,7 +63,13 @@ export const Pricing = () => {
     </div>
     <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-stretch lg:justify-center">
       {pricingTiers.map(({ title, price, classTag, buttonText,  popular, inverse, features}) => (
-        <div className={twMerge("p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-sm w-full", inverse === true && "border-black bg-black text-white")}>
+        
+        <motion.div
+            initial={{ opacity: 0, y: 50 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 1.2, ease: "easeOut" }} 
+            viewport={{ once: true }}  
+            className={twMerge("p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-sm w-full", inverse === true && "border-black bg-black text-white")}>
           <div className="">  
             <h3 className={twMerge("text-lg font-bold text-black/50", inverse===true && "text-white")}>{title}</h3>
             {popular === true && (
@@ -73,14 +82,15 @@ export const Pricing = () => {
             <span className="text-4xl font-bold tracking-tighter leading-none">${price}</span>
             <span className={twMerge("tracking-tight font-bold text-black/50", inverse==true && "text-white/80")}>/ {classTag}</span>
           </div>
-          <button className={twMerge("btn btn-primary w-full mt-[30px]", inverse === true && "bg-white text-black")}>{buttonText}</button>
+          <a href="https://wa.me/56940988254" 
+                    target="_blank" className={twMerge("btn btn-primary w-full mt-[30px]", inverse === true && "bg-white text-black")}>{buttonText}</a>
           <ul className="flex flex-col gap-5 mt-8">{features.map((feat) => (
             <li className="text-sm flex items-center gap-4">
               <CheckIcon className="h-6 w-6"/>
               <span>{feat}</span>
             </li>
           ))}</ul>
-        </div>
+        </motion.div>
       ))}
     </div>
 
