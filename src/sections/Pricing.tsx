@@ -69,8 +69,9 @@ export const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 1.2, ease: "easeOut" }} 
             viewport={{ once: true }}  
+            key={title}
             className={twMerge("p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-sm w-full", inverse === true && "border-black bg-black text-white")}>
-          <div className="">  
+          <div>  
             <h3 className={twMerge("text-lg font-bold text-black/50", inverse===true && "text-white")}>{title}</h3>
             {popular === true && (
               <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20 mt-2">
@@ -85,7 +86,7 @@ export const Pricing = () => {
           <a href="https://wa.me/56940988254" 
                     target="_blank" className={twMerge("btn btn-primary w-full mt-[30px]", inverse === true && "bg-white text-black")}>{buttonText}</a>
           <ul className="flex flex-col gap-5 mt-8">{features.map((feat) => (
-            <li className="text-sm flex items-center gap-4">
+            <li className="text-sm flex items-center gap-4" key={feat}>
               <CheckIcon className="h-6 w-6"/>
               <span>{feat}</span>
             </li>
