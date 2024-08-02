@@ -21,6 +21,9 @@ const config: Config = {
           lg: "80px",
         },
       },
+      blur: {
+        '200': '200px', 
+      },
     },
   },
   plugins: [],

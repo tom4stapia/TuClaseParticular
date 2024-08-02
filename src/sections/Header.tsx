@@ -6,7 +6,7 @@ import { Navbar } from "@/components/Navbar";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 backdrop-blur-md z-10">
+    <header className="sticky top-0 backdrop-blur-md z-10 bg-gray-600">
     <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-2">
       <p className="text-white/80 hidden md:block ">¿Estás buscando una clase particular para tu hijo?</p>
       <div className="inline-flex gap-1 items-center">
