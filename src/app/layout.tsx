@@ -15,7 +15,7 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Tu Clase Particular" />
+        <meta property="og:title" content="Clases particulares: Encuentra al profesor que estás buscando" />
         <meta property="og:description" content="¿Estás buscando una clase particular para tu hijo? Agenda tu clase con nosotros!" /> 
         <meta property="og:image" content="https://i.postimg.cc/P5zvwKDr/prev-1.webp" />
         <meta property="og:url" content="https://www.tuclaseparticular.cl" />
