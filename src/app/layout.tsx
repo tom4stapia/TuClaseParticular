@@ -21,7 +21,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://www.tuclaseparticular.cl" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Clases particulares: Encuentra al profesor que estás buscando" />
-        <meta name="google-site-verification" content="7P_f8EA2asYmee8a4EC6KZEfY21ffBRCi1WkZ3q0Hks" />
+        <meta name="google-site-verification" content="Ly-TmlUdu7rszX6sk9wDLwa1InQykc3_2Syaop4Q1ro" />
 
         <link rel="icon" type="image/svg+xml" href="/logo.webp" />
         <title>Tu Clase Particular</title>
